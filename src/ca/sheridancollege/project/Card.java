@@ -44,6 +44,9 @@ public abstract class Card {
         return value;
     }   
     
-    public abstract String toString();
+    public String toString(){
+        return "[Rank: " + rank + " Suit: " + suit + " Value " + value +  "]";
+        
+    }
  
 }
