@@ -3,7 +3,7 @@ package group5_blackjack;
 /**
  * This class +++Insert Description Here+++
  *
- * @author Semaj Primm
+ * @author Semaj Primm testing123
  */
 public class Group5_BlackJack {
 
