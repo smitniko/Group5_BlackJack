@@ -6,7 +6,7 @@
  * @author Nikolas Smith
  * @author Ryan McMahon
  * @author Semaj Primm
- * @author Dominique Rodney
+ * 
  */
 package ca.sheridancollege.project;
 
