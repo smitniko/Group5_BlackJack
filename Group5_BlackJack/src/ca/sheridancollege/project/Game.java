@@ -1,12 +1,10 @@
 /**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- * Date: 10/14/2020
+ * SYST 17796 Final Project 
+ * Game Class 
+ * Date: 12/02/2020
  * @author Nikolas Smith
  * @author Ryan McMahon
  * @author Semaj Primm
- * @author Dominique Rodney
  */
 package ca.sheridancollege.project;
 
@@ -14,20 +12,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * The class that models your game. You should create a more specific child of this class and instantiate the methods
- * given.
- *
- * @author dancye
- * @author Paul Bonenfant Jan 2020
+ * The class that models our game. 
  */
 public class Game {
-
     private String name;                //the title of the game
     private ArrayList<Player> players;  // the players of the game
     
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // Creates game object and sets name of game
         Game game = new Game("Blackjack");
@@ -36,18 +26,22 @@ public class Game {
         Player player = new Player("Player");
         Player dealer = new Player("Dealer");
         
-        // TODO: Create a Deck object here
-        
+        // Creates new Deck Object
+        Deck nDeck = new Deck();
+        // nDeck.Deck();            // method for calling deck object. 
         
         // Adds player and dealer to Game players
         game.addPlayer(player);
         game.addPlayer(dealer);
         
+        // Sysyem Info New Game
         System.out.println("Welcome to " + game.getName());
         System.out.println("You are: " + player.getName() + "\t Opponent is: " + dealer.getName() + "\n");
         
+        // Start playing game method
         game.play();
         
+        // Declare Winner method
         game.declareWinner();
         
     }
@@ -58,23 +52,17 @@ public class Game {
         players = new ArrayList();
     }
 
-    /**
-     * @return the name
-     */
+    /** @return the name */
     public String getName() {
         return name;
     }
 
-    /**
-     * @return the players of this game
-     */
+    /** @return the players of this game */
     public ArrayList<Player> getPlayers() {
         return players;
     }
 
-    /**
-     * @param players the players of this game
-     */
+    /** @param players the players of this game */
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
@@ -83,9 +71,7 @@ public class Game {
         this.players.add(player);
     }
 
-    /**
-     * Play the game. This might be one method or many method calls depending on your game.
-     */
+    /** Play the game. This might be one method or many method calls depending on your game. */
     public void play(){
         boolean gameOver = false;
         while(!gameOver){
@@ -116,18 +102,14 @@ public class Game {
                 }
                 // Prints out player score
                 System.out.println("YOUR SCORE: " + players.get(0).getScore() + "\n");
-            
-            }
-            
+            }   
         }
     }
 
-    /**
-     * When the game is over, use this method to declare and display a winning player.
-     */
+    /** When the game is over, use this method to declare and display a winning player. */
     public void declareWinner(){
         System.out.println("GAME OVER");
-
+        
         if(players.get(1).getScore() > 21 && players.get(0).getScore() <= 21){
             System.out.println(players.get(0).getName() + " wins");
         } else if(players.get(0).getScore() > 21 && players.get(1).getScore() <= 21){
@@ -138,5 +120,4 @@ public class Game {
             System.out.println("BUST");
         }
     }
-
 }
