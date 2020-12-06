@@ -80,7 +80,7 @@ public class Game {
             // Dealer randomly hits or stands
             //int r = (int)(Math.random()*2)+1;
             players.get(1).hit();
-            System.out.println(players.get(1).getName() + " SCORE: " + players.get(1).getScore());
+            System.out.println(players.get(1).getName() + " Hits \n" + players.get(1).getName() + " SCORE: " + players.get(1).getScore());
             
             // Ends game if dealer score is more than or equal to 21
             if(players.get(1).getScore() >= 21){
@@ -108,6 +108,7 @@ public class Game {
 
     /** When the game is over, use this method to declare and display a winning player. */
     public void declareWinner(){
+        System.out.println("\n");
         System.out.println("GAME OVER");
         
         if(players.get(1).getScore() > 21 && players.get(0).getScore() <= 21){
@@ -119,5 +120,8 @@ public class Game {
         } else{
             System.out.println("BUST");
         }
+        // Prints final score of dealer and player
+        System.out.println(players.get(1).getName() + " FINAL SCORE: " + players.get(1).getScore());
+        System.out.println("YOUR FINAL SCORE: " + players.get(0).getScore() + "\n");
     }
 }
