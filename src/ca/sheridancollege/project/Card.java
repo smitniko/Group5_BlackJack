@@ -1,30 +1,42 @@
 /**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- * Date: 10/14/2020
+ * SYST 17796 Final Project 
+ * Game Class 
+ * Date: 12/02/2020
  * @author Nikolas Smith
  * @author Ryan McMahon
  * @author Semaj Primm
- * @author Dominique Rodney
  */
 package ca.sheridancollege.project;
 
-/**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
- */
-public abstract class Card {
-    //default modifier for child classes
-
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    @Override
-    public abstract String toString();
-
+public class Card {
+    
+   private Suit suit;
+   private CardValue cardValue;
+   
+   public Card(CardValue cardValue, Suit suit){
+       this.cardValue = cardValue;
+       this.suit = suit;
+   }
+   
+   public Suit getSuit(){
+       return suit;
+   }
+   
+   public void setSuit(Suit suit){
+       this.suit = suit;
+   }
+   
+   public CardValue getCardValue(){
+       return cardValue;
+   }
+   
+   public void setCardValue(CardValue cardValue){
+       this.cardValue = cardValue;
+   }
+    
+   @Override
+   public String toString(){
+       return "[ "+suit+" :  "+cardValue+"";
+   }
+   
 }
