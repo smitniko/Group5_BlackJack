@@ -96,6 +96,7 @@ public class Game {
 
                 // dealer starts by dealing card
                 // only happens once per game, start deal = 1 after code runs
+                
                 if (startDeal == 0) {
                     players.get(1).hit();
                     System.out.println(players.get(1).getName() + " Hits \n" + players.get(1).getName() + " SCORE: " + players.get(1).getScore());
@@ -106,7 +107,8 @@ public class Game {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("Hit or Stand?");
                 String playerHitOrStand = scan.nextLine();
-
+                
+                // 
                 switch (playerHitOrStand) {
 
                     case "Hit":
@@ -126,22 +128,10 @@ public class Game {
                         System.out.println("Please choose 'Hit' or 'Stand'.");
                 }
 
-//                    if (playerHitOrStand.equals("Hit")) {
-//                    players.get(1).hit();
-//                    System.out.println(players.get(1).getName() + " Hits \n" + players.get(1).getName() + " SCORE: " + players.get(1).getScore());
-//                            players.get(0).hit();
-//                        } else if (playerHitOrStand.equals("Stand")) {
-//                            gameOver = true;
-//                        } else {
-//                            System.out.println("Please choose 'Hit' or 'Stand'.");
-//                        }
                 // Ends game if player score is more than or equal to 21
                 if (players.get(0).getScore() >= 21) {
                     gameOver = true;
                 }
-
-                // Prints out player score
-                // System.out.println("YOUR SCORE: " + players.get(0).getScore() + "\n");
             }
         }
     }
