@@ -123,7 +123,7 @@ public class Game {
                         gameOver = true;
                         break;
                     default:
-                        System.out.println("Please choose 'Hit' or 'Stay'.");
+                        System.out.println("Please choose 'Hit' or 'Stand'.");
                 }
 
 //                    if (playerHitOrStand.equals("Hit")) {
