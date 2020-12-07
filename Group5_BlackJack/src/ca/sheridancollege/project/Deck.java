@@ -15,6 +15,7 @@ import java.util.Iterator;
 public class Deck {
     private ArrayList deck;
     
+    //test comment. Delete after push 
     public void Deck(){  
         this.deck = new ArrayList();
         for(int i = 0; i < 13; i++){
