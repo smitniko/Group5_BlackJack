@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Final Project 
  * Game Class 
- * Date: 12/02/2020
+ * Date: 12/07/2020
  * @author Nikolas Smith
  * @author Ryan McMahon
  * @author Semaj Primm
@@ -26,9 +26,22 @@ public class Game {
         Player player = new Player("Player");
         Player dealer = new Player("Dealer");
         
-        // Creates new Deck Object
-        Deck nDeck = new Deck();
-        // nDeck.Deck();            // method for calling deck object. 
+        // Deck Object
+//        DeckOfCards deck = new DeckOfCards();
+//        deck = new DeckOfCards();
+//        deck.shuffle();
+        
+        
+        // Creates updated Deck for ShowCard
+//        ShowCard Hand = new ShowCard();
+//        Hand.ShowCard();
+        
+        //Test Card object
+//        Card card1 = new Card("ace" , "spades");
+//        System.out.println(card1);
+        
+        
+        
         
         // Adds player and dealer to Game players
         game.addPlayer(player);
