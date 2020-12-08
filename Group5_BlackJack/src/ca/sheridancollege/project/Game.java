@@ -25,27 +25,11 @@ public class Game {
         // Creates player and dealer objects
         Player player = new Player("Player");
         Player dealer = new Player("Dealer");
-        
-        // Deck Object
-//        DeckOfCards deck = new DeckOfCards();
-//        deck = new DeckOfCards();
-//        deck.shuffle();
-        
-        
-        // Creates updated Deck for ShowCard
-//        ShowCard Hand = new ShowCard();
-//        Hand.ShowCard();
-        
-        //Test Card object
-//        Card card1 = new Card("ace" , "spades");
-//        System.out.println(card1);
-        
-        
-        
-        
+    
         // Adds player and dealer to Game players
         game.addPlayer(player);
         game.addPlayer(dealer);
+        
         
         // Sysyem Info New Game
         System.out.println("Welcome to " + game.getName());
@@ -89,6 +73,13 @@ public class Game {
         boolean gameOver = false;
         while(!gameOver){
             
+                 // Deck Object
+            DeckOfCards deck = new DeckOfCards();
+            deck = new DeckOfCards();
+            deck.shuffle();
+    //      deck.dealTopCard();
+         
+
             // DEALER HITS OR STANDS
             // Dealer randomly hits or stands
             //int r = (int)(Math.random()*2)+1;
@@ -107,6 +98,7 @@ public class Game {
 
                 if(playerHitOrStand.equals("Hit")){
                     players.get(0).hit();
+                    deck.cardHit();
                 }
                 
                 // Ends game if player score is more than or equal to 21
