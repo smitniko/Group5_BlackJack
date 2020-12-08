@@ -1,0 +1,18 @@
+# Black Jack Created by Group 5 
+# Nikolas Smith - 991163100 
+# Semaj Primm - 991474718 
+# Ryan McMahon - 991501333 
+
+
+### NetBeans ###
+/Group5_BlackJack/nbproject/private/
+/Group5_BlackJack/build/
+/nbproject/Makefile-.mk
+**/nbproject/Package-.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# End

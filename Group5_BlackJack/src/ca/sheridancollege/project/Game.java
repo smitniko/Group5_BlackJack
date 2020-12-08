@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Final Project 
  * Game Class 
- * Date: 12/02/2020
+ * Date: 12/07/2020
  * @author Nikolas Smith
  * @author Ryan McMahon
  * @author Semaj Primm
@@ -25,14 +25,11 @@ public class Game {
         // Creates player and dealer objects
         Player player = new Player("Player");
         Player dealer = new Player("Dealer");
-        
-        // Creates new Deck Object
-        Deck nDeck = new Deck();
-        // nDeck.Deck();            // method for calling deck object. 
-        
+    
         // Adds player and dealer to Game players
         game.addPlayer(player);
         game.addPlayer(dealer);
+        
         
         // Sysyem Info New Game
         System.out.println("Welcome to " + game.getName());
@@ -76,6 +73,13 @@ public class Game {
         boolean gameOver = false;
         while(!gameOver){
             
+                 // Deck Object
+            DeckOfCards deck = new DeckOfCards();
+            deck = new DeckOfCards();
+            deck.shuffle();
+    //      deck.dealTopCard();
+         
+
             // DEALER HITS OR STANDS
             // Dealer randomly hits or stands
             //int r = (int)(Math.random()*2)+1;
@@ -94,6 +98,7 @@ public class Game {
 
                 if(playerHitOrStand.equals("Hit")){
                     players.get(0).hit();
+                    deck.cardHit();
                 }
                 
                 // Ends game if player score is more than or equal to 21
